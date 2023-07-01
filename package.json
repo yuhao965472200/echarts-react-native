@@ -1,6 +1,6 @@
 {
   "name": "echarts-react-native",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "echarts-react-native",
   "main": "src/index.js",
   "repository": {

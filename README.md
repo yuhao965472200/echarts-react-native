@@ -1,8 +1,8 @@
 ## install
 
 ```
-$ npm install native-react-native react-native-webview
-$ yarn add native-react-native react-native-webview
+$ npm install echarts-react-native react-native-webview
+$ yarn add echarts-react-native react-native-webview
 ```
 
 ## Usage
