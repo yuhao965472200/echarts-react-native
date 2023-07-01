@@ -1,8 +1,8 @@
 ## install
 
 ```
-$ npm install native-react-native --save
-$ yarn add native-react-native
+$ npm install native-react-native react-native-webview
+$ yarn add native-react-native react-native-webview
 ```
 
 ## Usage
