@@ -1,7 +1,7 @@
 import { View } from 'react-native'
 import WebView from 'react-native-webview'
-import renderEcharts from 'native-echarts/src/components/Echarts/renderEcharts'
-import HtmlWeb from 'native-echarts/src/utils/HtmlWeb'
+import renderEcharts from './renderEcharts'
+import HtmlWeb from '../../utils/HtmlWeb'
 
 export default function Index(props) {
   return (

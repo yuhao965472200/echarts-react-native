@@ -1,4 +1,4 @@
-import toString from 'native-echarts/src/utils/toString'
+import toString from '../../utils/toString'
 
 export default function renderEcharts(props) {
   const height = `${props.height || 400}px`

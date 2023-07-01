@@ -1,4 +1,4 @@
-import echarts from 'native-echarts/src/components/Echarts/echarts.min'
+import echarts from '../components/Echarts/echarts.min'
 export default function HtmlWeb() {
 
   return `<!DOCTYPE html>
