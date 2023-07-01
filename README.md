@@ -18,7 +18,7 @@ component props:
 
 ```js
 import { Dimensions } from 'react-native'
-import Echarts from 'native-echarts'
+import Echarts from 'echarts-react-native'
 
 const { width } = Dimensions.get('window')
 
