@@ -1,12 +1,12 @@
-# native-echarts
+# native-react-native
 
-[![NPM Version](https://img.shields.io/npm/v/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-echarts)
-  [![npm](https://img.shields.io/npm/dm/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-echarts)
-  [![License](http://img.shields.io/npm/l/native-echarts.svg?style=flat)](https://raw.githubusercontent.com/somonus/react-native-echarts/master/LICENSE.md)
-  
+[![NPM Version](https://img.shields.io/npm/v/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-react-native)
+[![npm](https://img.shields.io/npm/dm/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-react-native)
+
 ## install
 
-$ npm install native-echarts --save
+$ npm install native-react-native --save
+$ yarn add native-react-native
 
 ## Usage
 
@@ -14,79 +14,125 @@ The Usage is complete consistent with Echarts
 
 component props:
 
-* *option* (object): The option for echarts: [Documentation](http://echarts.baidu.com/option.html#title)。 
-* *width* (number): The width of the chart. The default value is the outer container width. 
-* *height* (number): The height of the chart. The default value is 400. 
-
+- _option_ (object): The option for echarts: [Documentation](https://echarts.apache.org/)。
 
 ```js
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-import Echarts from 'native-echarts';
+import { Dimensions } from 'react-native'
+import Echarts from 'native-echarts'
 
-export default class app extends Component {
-  render() {
-    const option = {
-      title: {
-          text: 'ECharts demo'
+const { width } = Dimensions.get('window')
+
+export default function Line() {
+  const option = {
+    color: [
+      {
+        type: 'linear',
+        x: 0,
+        y: 0,
+        x2: 0,
+        y2: 1,
+        colorStops: [
+          {
+            offset: 0,
+            color: '#74ebd5',
+          },
+          {
+            offset: 0.5,
+            color: '#38C0FF',
+          },
+          {
+            offset: 1,
+            color: '#9face6',
+          },
+        ],
       },
-      tooltip: {},
-      legend: {
-          data:['销量']
+    ],
+    tooltip: {
+      trigger: 'axis',
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: true,
+      data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+      axisLabel: {
+        color: '#898989',
+        textStyle: {
+          fontWeight: 'bold',
+        },
       },
-      xAxis: {
-          data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+      axisLine: {
+        lineStyle: {
+          color: 'transparent',
+        },
       },
-      yAxis: {},
-      series: [{
-          name: '销量',
-          type: 'bar',
-          data: [5, 20, 36, 10, 10, 20]
-      }]
-    };
-    return (
-      <Echarts option={option} height={300} />
-    );
+    },
+    yAxis: {
+      type: 'value',
+      min: 0,
+      max: 1500,
+      splitLine: {
+        lineStyle: {
+          type: 'dashed',
+          color: '#2C2C2C',
+        },
+        show: true,
+      },
+    },
+    grid: {
+      left: '0%',
+      right: '0%',
+    },
+    series: [
+      {
+        data: [320, 932, 700, 934, 1290, 830, 460],
+        type: 'line',
+        smooth: true,
+        showSymbol: false,
+        lineStyle: {
+          normal: {
+            width: 2,
+          },
+        },
+        areaStyle: {
+          normal: {
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: '#74ebd5',
+                },
+                {
+                  offset: 0.5,
+                  color: 'rgba(159,172,230,0.8)',
+                },
+                {
+                  offset: 1,
+                  color: 'rgba(0,0,0,0)',
+                },
+              ],
+            },
+            opacity: 0.3,
+          },
+        },
+      },
+    ],
   }
+
+  return <Echarts option={option} height={300} width={width} />
 }
-
-AppRegistry.registerComponent('app', () => app);
-
 ```
 
-
-
-##Example
-
-*run demo*
-
 ```
-cd example
 npm install
 npm start
+expo start
 ```
-
-### IOS
-
-Open the xcode project in the ios directory and click run
-
-screenshots：
-
-![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoIOS.png)
-
-### Android
-
-Open the Android project in the android directory with Android Studio and click run.
-
-screenshots：
-
-![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoAndroid.png)
 
 ## License
 
-native-echarts is released under the MIT license.
+echarts-react-native is released under the MIT license.
