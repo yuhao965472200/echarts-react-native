@@ -1,12 +1,9 @@
-# native-react-native
-
-[![NPM Version](https://img.shields.io/npm/v/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-react-native)
-[![npm](https://img.shields.io/npm/dm/native-echarts.svg?style=flat)](https://www.npmjs.org/package/native-react-native)
-
 ## install
 
+```
 $ npm install native-react-native --save
 $ yarn add native-react-native
+```
 
 ## Usage
 
