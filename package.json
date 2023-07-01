@@ -1,0 +1,22 @@
+{
+  "name": "echarts-react-native",
+  "version": "1.0.0",
+  "description": "echarts-react-native",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuhao965472200/echarts-react-native.git"
+  },
+  "keywords": [
+    "react-native",
+    "echarts",
+    "chart",
+    "charts"
+  ],
+  "author": "choes",
+  "license": "MIT",
+  "homepage": "https://github.com/yuhao965472200/echarts-react-native",
+  "dependencies": {
+    "echarts": "5.4.2"
+  }
+}
