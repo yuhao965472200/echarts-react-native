@@ -14,6 +14,7 @@ export default function Index(props) {
         bounces={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
+        nestedScrollEnabled={props.nestedScrollEnabled}
         style={{
           height: props.height || 400,
           backgroundColor: props.backgroundColor || 'transparent'
